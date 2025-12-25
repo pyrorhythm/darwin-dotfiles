@@ -1,18 +1,16 @@
-{ pkgs, ... }:
-
-{
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
+{ pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
 
-  nix.enable = false;
-
-  nix.package = pkgs.nix;
-
-  nix.settings = {
-    auto-optimise-store = false;
+  nix = {
+    enable = true;
+    package = pkgs.nix;
+    settings = {
+      auto-optimise-store = false;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
   };
+
 }

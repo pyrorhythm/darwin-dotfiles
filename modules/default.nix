@@ -2,8 +2,8 @@
    imports = [
       ./brew.nix
       ./core.nix
-      ./system.nix
-      ./app.nix
+      ./system-configuration.nix
+      ./system-packages.nix
       ./user.nix
       ./fonts.nix
    ];

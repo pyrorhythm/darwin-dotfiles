@@ -98,6 +98,4 @@
   };
 
   security.pam.services.sudo_local.touchIdAuth = true;
-
-  time.timeZone = "Europe/Moscow";
 }

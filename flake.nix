@@ -29,11 +29,13 @@
       username = "pyrorhythm";
       email = "me@pyrorhythm.dev";
       system = "aarch64-darwin";
+      timezone = "Europe/Moscow";
       hostname = "workstation";
       specialArgs = inputs // {
         inherit
           username
           hostname
+          timezone
           email;
       };
 

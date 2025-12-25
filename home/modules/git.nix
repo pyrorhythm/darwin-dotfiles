@@ -31,10 +31,6 @@
                autoSetupRemote = true;
             };
 
-            pull = {
-               rebase = true;
-            };
-
             user = {
                name = username;
                email = email;
