@@ -37,6 +37,7 @@
       specialArgs = inputs // {
         inherit
           username
+          system
           hostname
           timezone
           email;
@@ -51,8 +52,6 @@
 
             modules = [
                ./modules
-
-               rift.outputs.default
 
                home-manager.darwinModules.home-manager
                {
