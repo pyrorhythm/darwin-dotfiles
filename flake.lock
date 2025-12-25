@@ -3,7 +3,7 @@
     "darwin": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs-darwin"
+          "nixpkgs"
         ]
       },
       "locked": {
@@ -41,7 +41,7 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs-darwin"
+          "nixpkgs"
         ]
       },
       "locked": {
@@ -63,20 +63,6 @@
       "locked": {
         "lastModified": 1766624085,
         "narHash": "sha256-ruzNOGQR0HKynAarKRhAYwIZc79IkDqui4ovQmkZPQI=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b72f284b1be41575c3e36cd777a191c29a7adf6a",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs-darwin": {
-      "locked": {
-        "lastModified": 1766624085,
-        "narHash": "sha256-ruzNOGQR0HKynAarKRhAYwIZc79IkDqui4ovQmkZPQI=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "b72f284b1be41575c3e36cd777a191c29a7adf6a",
@@ -93,18 +79,21 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "nixpkgs-darwin"
+          "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1,
+        "lastModified": 1766674290,
         "narHash": "sha256-aOc1oBwiT3OyVtK9oGyZhKCxYklS3ABbI/7ElkcCV5Y=",
-        "path": "./flakes/rift",
-        "type": "path"
+        "owner": "pyrorhythm",
+        "repo": "rift-bin",
+        "rev": "43b19f5ab8bcbf2e25235e9afef2809cadd5f736",
+        "type": "github"
       },
       "original": {
-        "path": "./flakes/rift",
-        "type": "path"
+        "owner": "pyrorhythm",
+        "repo": "rift-bin",
+        "type": "github"
       }
     },
     "root": {
@@ -112,7 +101,6 @@
         "darwin": "darwin",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-darwin": "nixpkgs-darwin",
         "rift": "rift"
       }
     },
