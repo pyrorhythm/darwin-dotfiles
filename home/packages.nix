@@ -9,6 +9,7 @@
 
     uv
     go-task
+    gh
     # claude-code
 
     docker

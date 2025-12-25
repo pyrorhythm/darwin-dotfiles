@@ -11,5 +11,7 @@
     nil
     nixd
     mos
+
+    git
   ];
 }
