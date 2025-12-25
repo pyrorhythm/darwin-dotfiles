@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, rift, system, ... }: {
   environment.systemPackages = with pkgs; [
     home-manager
 
@@ -13,5 +13,7 @@
     mos
 
     git
+
+    rift.packages.${system}.default
   ];
 }

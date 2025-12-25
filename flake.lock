@@ -83,11 +83,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766674290,
-        "narHash": "sha256-aOc1oBwiT3OyVtK9oGyZhKCxYklS3ABbI/7ElkcCV5Y=",
+        "lastModified": 1766680307,
+        "narHash": "sha256-dZqhH2y0YF3uI9cvVp07Hps3bZRvw6+HmRkacUiPCNs=",
         "owner": "pyrorhythm",
         "repo": "rift-bin",
-        "rev": "43b19f5ab8bcbf2e25235e9afef2809cadd5f736",
+        "rev": "4a8da6e258c6d51f99501b2291a83039b5f84e61",
         "type": "github"
       },
       "original": {

@@ -44,12 +44,15 @@
     in
     {
       darwinConfigurations = {
-         hostname = darwin.lib.darwinSystem {
-            inherit system specialArgs;
+         "${hostname}" = darwin.lib.darwinSystem {
+            system = system;
+
+            inherit specialArgs;
+
             modules = [
                ./modules
 
-               rift.darwinModules.default
+               rift.outputs.default
 
                home-manager.darwinModules.home-manager
                {
