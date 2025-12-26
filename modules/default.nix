@@ -1,10 +1,10 @@
-{...}: {
+{rift, ...}: {
+   nixpkgs.overlays = [ rift.overlays.default ];
+
    imports = [
-      ./brew.nix
       ./core.nix
-      ./system-configuration.nix
-      ./system-packages.nix
-      ./user.nix
-      ./fonts.nix
+      ./system
+      ./user
+      ./services
    ];
 }

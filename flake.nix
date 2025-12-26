@@ -14,9 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rift = {
-      url = "github:pyrorhythm/rift-bin";
-      inputs.nixpkgs.follows = "nixpkgs";
+       url = "github:pyrorhythm/rift-nixed";
+       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs =
@@ -42,6 +43,7 @@
           timezone
           email;
       };
+
     in
     {
       darwinConfigurations = {
@@ -52,6 +54,8 @@
 
             modules = [
                ./modules
+
+               rift.darwinModules.default
 
                home-manager.darwinModules.home-manager
                {

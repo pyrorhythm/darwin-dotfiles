@@ -58,6 +58,7 @@
           ShowHardDrivesOnDesktop = true;
           ShowMountedServersOnDesktop = true;
           ShowRemovableMediaOnDesktop = true;
+          AppleShowAllFiles = true;
           _FXSortFoldersFirst = true;
           FXDefaultSearchScope = "SCcf";
         };
