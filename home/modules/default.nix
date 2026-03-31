@@ -1,6 +1,8 @@
-{...}: {
-   imports = [
-      ./git.nix
-      ./terminal
-   ];
+{ ... }:
+{
+  imports = [
+    ./git.nix
+    ./browser.nix
+    ./terminal
+  ];
 }

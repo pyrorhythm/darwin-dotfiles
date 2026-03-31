@@ -3,21 +3,27 @@
 
   inputs = {
     nixpkgs = {
-       url = "github:nixos/nixpkgs/nixpkgs-unstable";
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
     darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rift = {
-       url = "github:pyrorhythm/rift-nixed";
-       inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
-
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -26,11 +32,12 @@
       nixpkgs,
       darwin,
       home-manager,
-      rift,
+      zen-browser,
+      firefox-addons,
       ...
     }:
     let
-      username = "pyrorhythm";
+      username = "pyro";
       email = "me@pyrorhythm.dev";
       system = "aarch64-darwin";
       timezone = "Europe/Moscow";
@@ -41,31 +48,32 @@
           system
           hostname
           timezone
-          email;
+          email
+          ;
       };
-
     in
     {
       darwinConfigurations = {
-         "${hostname}" = darwin.lib.darwinSystem {
-            system = system;
+        "${hostname}" = darwin.lib.darwinSystem {
+          system = system;
 
-            inherit specialArgs;
+          inherit
+            specialArgs
+            ;
 
-            modules = [
-               ./modules
+          modules = [
+            ./modules
 
-               rift.darwinModules.default
-
-               home-manager.darwinModules.home-manager
-               {
-                  home-manager.useGlobalPkgs = true;
-                  home-manager.useUserPackages = true;
-                  home-manager.extraSpecialArgs = specialArgs;
-                  home-manager.users.${username} = import ./home;
-               }
-            ];
-         };
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.users.${username} = import ./home;
+              home-manager.backupFileExtension = ".hm-backup";
+            }
+          ];
+        };
       };
     };
 }

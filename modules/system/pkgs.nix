@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     home-manager
 
-    gcc-unwrapped
     zlib
     libuv
 
@@ -10,8 +10,19 @@
     openssl
     nil
     nixd
-    mos
+    nixfmt
+
+    p7zip
+    ripgrep
+    jq
+    yq
+    fzf
+    nmap
+    file
+    which
+    tree
 
     git
+    gnupg
   ];
 }

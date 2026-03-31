@@ -1,7 +1,8 @@
-{ username, ... }: {
+{ username, ... }:
+{
   imports = [
     ./modules
-    ./packages.nix
+    ./pkgs.nix
   ];
 
   home = {
