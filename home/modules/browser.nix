@@ -11,6 +11,7 @@
 
   programs.zen-browser = {
     enable = true;
+    package = null;
     setAsDefaultBrowser = true;
     policies = {
       AutofillAddressEnabled = true;
@@ -41,6 +42,8 @@
         ublock-origin
         privacy-badger
         # improved-tube
+        cookie-editor
+        # control-panel-for-youtube
         auto-tab-discard
         decentraleyes
         adaptive-tab-bar-colour

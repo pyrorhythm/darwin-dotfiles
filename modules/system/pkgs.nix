@@ -3,9 +3,6 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
-    zlib
-    libuv
-
     gnumake
     openssl
     nil
@@ -23,6 +20,5 @@
     tree
 
     git
-    gnupg
   ];
 }

@@ -10,7 +10,9 @@
 
       initContent = ''
         eval "$(/opt/homebrew/bin/brew shellenv)"
-        export PATH="$PATH:$HOME/.local/bin"
+        eval "$(direnv hook zsh)"
+
+        export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/.bun/bin:$HOME/.cargo/bin"
 
         gacp () {
           git add . && git commit -m "$1" && git push
