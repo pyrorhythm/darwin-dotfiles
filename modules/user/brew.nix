@@ -73,6 +73,7 @@
     masApps = {
       Xcode = 497799835;
       Amphetamine = 937984704;
+      Blankie = 6740096581;
     };
 
     goPackages = [
