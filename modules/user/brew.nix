@@ -10,6 +10,8 @@
         "farion1231/ccswitch"
         "oven-sh/bun"
         "terror/tap"
+        "acsandmann/tap"
+        "yvgude/lean-ctx"
     ];
 
     onActivation = {
@@ -49,20 +51,18 @@
         "anomalyco/tap/opencode"
         "oven-sh/bun/bun"
         "terror/tap/just-lsp"
-        "typester/ranma/ranma"
-        "typester/reap/reap"
+        "acsandmann/tap/rift"
         "yvgude/lean-ctx/lean-ctx"
     ];
 
     casks = [
         "farion1231/ccswitch/cc-switch"
+        "edouard-claude/tap/snip"
         "font-hack-nerd-font"
         "font-iosevka-charon"
-        "typester/yashiki/yashiki"
         "font-iosevka-charon-mono"
         "pearcleaner"
         "wireshark-app"
-        "edouard-claude/tap/snip"
         "thaw@beta"
         "mitmproxy"
         "zoom"

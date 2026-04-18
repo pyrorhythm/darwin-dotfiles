@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs = {
     zsh = {
@@ -51,6 +51,8 @@
           "zoxide"
         ];
       };
+
+      dotDir = "${config.xdg.configHome}/zsh";
     };
 
     oh-my-posh = {
