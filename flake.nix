@@ -28,12 +28,8 @@
 
   outputs =
     inputs@{
-      self,
-      nixpkgs,
       darwin,
       home-manager,
-      zen-browser,
-      firefox-addons,
       ...
     }:
     let

@@ -3,8 +3,10 @@
   programs.zed-editor = {
     enable = true;
     package = null;
-    userSettings = {
+    userSettings =
+    {
       use_system_window_tabs = true;
+
       title_bar = {
         button_layout = "platform_default";
         show_user_picture = false;
@@ -12,24 +14,25 @@
         show_sign_in = false;
         show_branch_name = true;
       };
-      debugger = {
-        button = false;
-      };
+
+      debugger.button = false;
+
       status_bar = {
         cursor_position_button = false;
         active_language_button = false;
       };
-      sticky_scroll = {
-        enabled = false;
-      };
+
+      sticky_scroll.enabled = false;
       document_symbols = "on";
       document_folding_ranges = "on";
       semantic_tokens = "combined";
       format_on_save = "off";
+
       centered_layout = {
         right_padding = 0.1;
         left_padding = 0.1;
       };
+
       toolbar = {
         code_actions = false;
         agent_review = false;
@@ -37,24 +40,25 @@
         quick_actions = false;
         breadcrumbs = false;
       };
-      git = {
-        enable_diff = true;
-      };
+
+      git.enable_diff = true;
+
       agent_servers = {
+        "pi-acp".type = "registry";
         "claude-acp" = {
           type = "registry";
-          favorite_config_option_values = {
-            mode = [ "bypassPermissions" ];
-          };
+          favorite_config_option_values.mode = [ "bypassPermissions" ];
         };
         opencode = {
-          favorite_config_option_values = {
-            model = [ "minimax-coding-plan/MiniMax-M2.7" ];
-          };
           type = "registry";
+          favorite_config_option_values.model = [ "minimax-coding-plan/MiniMax-M2.7" ];
         };
       };
+
       show_edit_predictions = false;
+
+      ssh_connections = [];
+
       hidden_files = [
         "**/.idea"
         "go.sum"
@@ -63,29 +67,37 @@
         "**/.ruff_cache"
         "**/__pycache__"
       ];
+
       edit_predictions = {
         mode = "subtle";
         provider = "zed";
       };
+
       agent = {
+        dock = "left";
         button = false;
         model_parameters = [ ];
       };
+
       collaboration_panel = {
+        dock = "right";
         button = false;
       };
-      notification_panel = {
-        button = false;
-      };
+
+      notification_panel.button = false;
+
       git_panel = {
         file_icons = true;
         status_style = "label_color";
         dock = "bottom";
         button = true;
       };
+
       outline_panel = {
+        dock = "right";
         button = true;
       };
+
       project_panel = {
         button = false;
         git_status_indicator = true;
@@ -103,56 +115,52 @@
         default_width = 240.0;
         dock = "left";
       };
+
       show_completion_documentation = true;
-      completions = {
-        words = "enabled";
-      };
+      completions.words = "enabled";
+
       inlay_hints = {
         show_background = false;
         show_parameter_hints = false;
         show_value_hints = true;
         enabled = true;
       };
+
       lsp_document_colors = "border";
       colorize_brackets = true;
+
       indent_guides = {
         active_line_width = 3;
         line_width = 2;
       };
+
       tab_size = 4;
+
       scrollbar = {
-        axes = {
-          horizontal = false;
-        };
+        axes.horizontal = false;
         diagnostics = "error";
         git_diff = false;
         show = "never";
       };
+
       inline_code_actions = false;
       relative_line_numbers = "disabled";
       unnecessary_code_fade = 0.6;
+
       diagnostics = {
         button = false;
-        lsp_pull_diagnostics = {
-          debounce_ms = 90;
-        };
-        inline = {
-          enabled = true;
-        };
+        lsp_pull_diagnostics.debounce_ms = 90;
+        inline.enabled = true;
         include_warnings = true;
       };
+
       icon_theme = {
         mode = "light";
         light = "Monospace Icon Theme - Dark";
         dark = "Monospace Icon Theme - Dark";
       };
+
       terminal = {
-        button = false;
-        show_count_badge = false;
-        flexible = true;
-        default_height = 240.0;
-        font_weight = 550.0;
-        font_size = 13.0;
         font_features = {
           dlig = true;
           cv59 = true;
@@ -164,27 +172,35 @@
           ss05 = true;
           ss01 = true;
         };
+        button = false;
+        show_count_badge = false;
+        flexible = true;
+        default_height = 240.0;
+        font_weight = 550.0;
+        font_size = 13.0;
         dock = "bottom";
         cursor_shape = "hollow";
         font_family = "Iosevka Extended";
         line_height = "standard";
       };
+
       search = {
         button = false;
         include_ignored = false;
         regex = true;
       };
+
       telemetry = {
         diagnostics = false;
         metrics = false;
       };
+
       tab_bar = {
         show_pinned_tabs_in_separate_row = false;
         show = false;
       };
-      minimap = {
-        show = "never";
-      };
+
+      minimap.show = "never";
       cursor_shape = "hollow";
       cursor_blink = true;
       current_line_highlight = "all";
@@ -192,8 +208,18 @@
       ui_font_weight = 400.0;
       ui_font_family = "IBM Plex Sans";
       ui_font_size = 13.0;
+
+      ui_font_features = {
+        ss01 = true;
+        ss02 = true;
+        ss03 = true;
+        ss04 = true;
+        ss05 = true;
+      };
+
       buffer_font_fallbacks = [ "Iosevka" ];
       buffer_font_family = "Iosevka Extended";
+
       buffer_font_features = {
         dlig = true;
         cv59 = true;
@@ -205,39 +231,38 @@
         ss05 = true;
         ss01 = true;
       };
-      buffer_line_height = {
-        custom = 1.2000000476837158;
-      };
+
+      buffer_line_height.custom = 1.2;
       buffer_font_size = 15.0;
       buffer_font_weight = 450.0;
       soft_wrap = "editor_width";
+
       theme = {
         mode = "dark";
         light = "One Light";
-        dark = "JetBrains Rider Dark";
+        dark = "Zedokai Darker (Filter Spectrum)";
       };
+
       languages = {
-        JSON = {
-          show_edit_predictions = true;
-        };
+        JSON.show_edit_predictions = true;
+
         Proto = {
+          show_edit_predictions = true;
           language_servers = [ "protobuf-language-server" ];
         };
-        Nix = {
-          show_edit_predictions = true;
-        };
+
+        Nix.show_edit_predictions = false;
+
         Go = {
           show_edit_predictions = false;
           format_on_save = "on";
-          language_servers = [
-            "gopls"
-            "golangci-lint"
-          ];
+          language_servers = [ "gopls" "golangci-lint" ];
           code_actions_on_format = {
             "source.organizeImports" = true;
             "source.fixAll" = true;
           };
         };
+
         Python = {
           tab_size = 2;
           indent_guides = {
@@ -253,76 +278,51 @@
             show_other_hints = true;
             enabled = true;
           };
-          language_servers = [
-            "pyrefly"
-            "ruff"
-            "!ty"
-          ];
+          language_servers = [ "pyrefly" "ruff" "!ty" ];
           code_actions_on_format = {
             "ruff.organizeImports" = true;
             "ruff.fixAll" = true;
           };
-          formatter = {
-            external = {
-              command = "bash";
-              arguments = [
-                "-c"
-                "ruff check --exit-zero --fix --unsafe-fixes --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
-              ];
-            };
+          formatter.external = {
+            command = "bash";
+            arguments = [
+              "-c"
+              "ruff check --exit-zero --fix --unsafe-fixes --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
+            ];
           };
           format_on_save = "on";
           show_completion_documentation = true;
         };
       };
+
       lsp = {
-        "protobuf-language-server" = {
-          binary = {
-            path = "$HOME/.cargo/bin/protobuf-lsp";
+        gopls.initialization_options = {
+          directoryFilters = [ "-**/node_modules" "-**/.git" ];
+          "formatting.gofumpt" = false;
+          symbolScope = "workspace";
+          staticcheck = true;
+          usePlaceholders = false;
+          templateExtensions = [ "templ" "tmpl" ];
+          experimentalPostfixCompletions = true;
+          analyses = {
+            nilness = true;
+            unusedparams = true;
+            unusedvariable = true;
+            unusedwrite = true;
+            useany = true;
+            ST1000 = false;
+            ST1001 = false;
+            ST1003 = false;
           };
-        };
-        gopls = {
-          initialization_options = {
-            directoryFilters = [
-              "-**/node_modules"
-              "-**/.git"
-            ];
-            "formatting.gofumpt" = false;
-            symbolScope = "workspace";
-            staticcheck = true;
-            usePlaceholders = false;
-            templateExtensions = [
-              "templ"
-              "tmpl"
-            ];
-            experimentalPostfixCompletions = true;
-            analyses = {
-              nilness = true;
-              unusedparams = true;
-              unusedvariable = true;
-              unusedwrite = true;
-              useany = true;
-              ST1000 = false;
-              ST1001 = false;
-            };
-            codelenses = {
-              gc_details = true;
-            };
-            hints = {
-              assignVariableTypes = true;
-              compositeLiteralFields = true;
-              compositeLiteralTypes = false;
-              constantValues = true;
-              functionTypeParameters = false;
-              parameterNames = true;
-              rangeVariableTypes = true;
-            };
-          };
-        };
-        pyrefly = {
-          enable_lsp_tasks = true;
-          fetch = {
-            pre_release = true;
+          codelenses.gc_details = true;
+          hints = {
+            assignVariableTypes = true;
+            compositeLiteralFields = true;
+            compositeLiteralTypes = false;
+            constantValues = true;
+            functionTypeParameters = false;
+            parameterNames = true;
+            rangeVariableTypes = true;
           };
         };
       };

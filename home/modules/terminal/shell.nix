@@ -9,8 +9,9 @@
       syntaxHighlighting.enable = true;
 
       initContent = ''
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-        eval "$(direnv hook zsh)"
+        export NVM_DIR="$HOME/.nvm"
+          [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+          [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
         export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/.bun/bin:$HOME/.cargo/bin"
 
@@ -55,6 +56,16 @@
     oh-my-posh = {
       enable = true;
       useTheme = "pure";
+    };
+
+    carapace = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
     };
   };
 }
